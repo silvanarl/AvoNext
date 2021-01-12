@@ -1,11 +1,12 @@
 import Navbar from './Navbar';
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
     return (
         <div className="">
             <Navbar />
             {children}
-            <footer className="container">This is the footer</footer>
+            <Footer />
             <style jsx>{`
             .container{
                 background: salmon;
