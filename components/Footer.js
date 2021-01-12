@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Footer = () => {
     return (
         <footer>
-            <div>
+            <div className="row">
                 <div>
                     <h3>Nosotros</h3>
                     <Link href="/about">
@@ -39,6 +39,17 @@ const Footer = () => {
                     
                 </div>
             </div>
+            <style jsx>{`
+            .row{
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                font-family: 'Montserrat', sans-serif;
+                padding: 1rem;
+            }
+            `}
+
+            </style>
         </footer>
     )
 }
