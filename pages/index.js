@@ -35,7 +35,10 @@ const Home = ({ productList }) => {
                         <div key={avo.id} className="avo-card">
                             <Link href={`product/${avo.id}`}>
                                 <a>
-                                    <Image alt={avo.name} src={avo.image} height="280" width="280" />
+                                    <div>
+                                        {console.log(avo.image)}
+                                        <Image src={avo.image} height="280" width="280" alt={avo.name} />
+                                    </div>
                                     <div className="avo-card-text">
                                         <h3>
                                             {avo.name}
