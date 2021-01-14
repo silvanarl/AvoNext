@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
+import styled from 'styled-components';
 
 
 export const getStaticProps = async () => {
@@ -13,6 +14,33 @@ export const getStaticProps = async () => {
         }
     }
 }
+
+const StyledCard = styled.div`
+    display: flex;
+    padding: .5rem;
+    justify-content:center;
+    margin: 1rem;
+    flex-direction: column;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    border-radius: 5px;
+    & a{
+        text-decoration: none;
+    }
+`;
+const StyledContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 100%;
+    justify-content:center;
+    font-family: 'Montserrat', sans-serif;
+    & h3 {
+        font-weight: 300;
+        color: #343435;
+        display: flex;
+        justify-content: space-around;
+    }
+`;
 
 const Home = ({ productList }) => {
     // const [productList, setProductList] = useState([]);
@@ -29,10 +57,10 @@ const Home = ({ productList }) => {
                     Next
                 </h1>
             </div>
-            <div className="avo-container">
+            <StyledContainer >
                 {
                     productList.map((avo) => (
-                        <div key={avo.id} className="avo-card">
+                        <StyledCard key={avo.id} >
                             <Link href={`product/${avo.id}`}>
                                 <a>
                                     <div>
@@ -47,10 +75,10 @@ const Home = ({ productList }) => {
                                     </div>
                                 </a>
                             </Link>
-                        </div>
+                        </StyledCard>
                     ))
                 }
-            </div>
+            </StyledContainer>
             <style jsx>{`
             .avo-title{
                 display: flex;
@@ -67,24 +95,24 @@ const Home = ({ productList }) => {
             .avo-title-img{
                 margin: .2rem;
             }
-            .avo-card{
-                display: flex;
-                padding: .5rem;
-                justify-content:center;
-                margin: 1rem;
-                flex-direction: column;
-                box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-                border-radius: 5px;
-            }
-            .avo-container{
-                display: flex;
-                flex-wrap: wrap;
-                margin: auto;
-                width: 100%;
-                justify-content:center;
-                font-family: 'Montserrat', sans-serif;
+            // .avo-card{
+            //     display: flex;
+            //     padding: .5rem;
+            //     justify-content:center;
+            //     margin: 1rem;
+            //     flex-direction: column;
+            //     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+            //     border-radius: 5px;
+            // }
+            // .avo-container{
+            //     display: flex;
+            //     flex-wrap: wrap;
+            //     margin: auto;
+            //     width: 100%;
+            //     justify-content:center;
+            //     font-family: 'Montserrat', sans-serif;
                 
-            }
+            // }
             .avo-container h3{
                 font-weight: 300;
                 color: #343435;
@@ -92,10 +120,10 @@ const Home = ({ productList }) => {
                 justify-content: space-around;
                 
             }
-            .avo-card a{
-                text-decoration: none;
+            // .avo-card a{
+            //     text-decoration: none;
 
-            }
+            // }
             .avo-card-text{
                 border-top: 1px solid #d4d4d5;
             }
