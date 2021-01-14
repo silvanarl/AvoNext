@@ -113,13 +113,13 @@ const Home = ({ productList }) => {
             //     font-family: 'Montserrat', sans-serif;
                 
             // }
-            .avo-container h3{
-                font-weight: 300;
-                color: #343435;
-                display: flex;
-                justify-content: space-around;
+            // .avo-container h3{
+            //     font-weight: 300;
+            //     color: #343435;
+            //     display: flex;
+            //     justify-content: space-around;
                 
-            }
+            // }
             // .avo-card a{
             //     text-decoration: none;
 
