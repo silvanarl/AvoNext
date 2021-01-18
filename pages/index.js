@@ -64,7 +64,7 @@ const Home = ({ productList }) => {
                             <Link href={`product/${avo.id}`}>
                                 <a>
                                     <div>
-                                        {console.log(avo.image)}
+                                        {/* {console.log(avo.image)} */}
                                         <Image src={avo.image} height="280" width="280" alt={avo.name} />
                                     </div>
                                     <div className="avo-card-text">
