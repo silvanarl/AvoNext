@@ -53,7 +53,7 @@ const Home = ({ productList }) => {
             <div className="avo-title">
                 <h1>
                     Avo 
-                    <Image className="avo-title-img" src="/images/avocado.svg" alt="avocado" height="70" width="60" />
+                    <img className="avo-title-img" src="/images/avocado.svg" alt="avocado" height="70" width="60" />
                     Next
                 </h1>
             </div>
@@ -64,8 +64,7 @@ const Home = ({ productList }) => {
                             <Link href={`product/${avo.id}`}>
                                 <a>
                                     <div>
-                                        {/* {console.log(avo.image)} */}
-                                        <Image src={avo.image} height="280" width="280" alt={avo.name} />
+                                        <img src={avo.image} alt={avo.name} height="280" width="280"  />
                                     </div>
                                     <div className="avo-card-text">
                                         <h3>
