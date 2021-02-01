@@ -53,7 +53,7 @@ const Home = ({ productList }) => {
             <div className="avo-title">
                 <h1>
                     Avo 
-                    <img className="avo-title-img" src="/images/avocado.svg" alt="avocado" height="70" width="60" />
+                    <Image className="avo-title-img" src="/images/avocado.svg" alt="avocado" height="70" width="60" />
                     Next
                 </h1>
             </div>
@@ -64,7 +64,7 @@ const Home = ({ productList }) => {
                             <Link href={`product/${avo.id}`}>
                                 <a>
                                     <div>
-                                        <img src={avo.image} alt={avo.name} height="280" width="280"  />
+                                        <Image src={avo.image} alt={avo.name} height="280" width="280"  />
                                     </div>
                                     <div className="avo-card-text">
                                         <h3>
@@ -78,7 +78,7 @@ const Home = ({ productList }) => {
                     ))
                 }
             </StyledContainer>
-            <style jsx>{`
+            <style jsx="true">{`
             .avo-title{
                 display: flex;
                 justify-content:center;
