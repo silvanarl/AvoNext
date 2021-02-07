@@ -18,6 +18,7 @@ class MyDocument extends Document {
             {/* script/js */}
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+            <script src="https://kit.fontawesome.com/4510c7bce0.js" crossorigin="anonymous"></script>
         </Head>
         <body className="body">
           <Main />
