@@ -59,7 +59,7 @@ const Footer = () => {
                 color: #494747;
             }
             .footer-content-item {
-                padding-bottom: 1rem;
+                margin: .8rem;
             }
             .footer-item-link{
                 text-decoration: none;
